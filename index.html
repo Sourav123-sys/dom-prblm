@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try_dom</title>
+    <link rel="stylesheet" href="style.css">
+  
+    
+</head>
+<body>
+    <header>
+        <h1>Hi,JS</h1>
+
+    </header>
+   
+
+<main>
+    <section id="selector">
+        <article class ="title test">
+            <h3 class="third-title">My awsome Blog-1</h3>
+            <!-- <span class="add"></span> -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore.</p>
+        </article>
+      
+        <article class = "test">
+            <h3 id="second-title">My awsome Blog-2</h3>
+            <!-- <span class="add"></span> -->
+            <p>Vel excepturi amet fugiat recusandae alias officia omnis culpa incidunt dolor. Rerum inventore minus et explicabo consequatur, incidunt enim eaque itaque, aliquam possimus est dolor id at sint. Porro et iusto consequuntur, esse perferendis beatae ad, assumenda velit id, explicabo corrupti repellat nemo ex eos atque nostrum reiciendis optio eum!</p>
+        </article>
+        
+        <article class ="title test">
+            <h3 class="third-title">My awsome Blog-3</h3>
+            <!-- <span class="add"></span> -->
+            <p>Ab soluta dolore magni. Incidunt fugiat suscipit facilis! Dicta, quas dolor illum ea at adipisci nesciunt laborum harum provident, impedit eius numquam atque consequuntur sequi quos odio molestiae temporibus laudantium, quia minima rem corrupti suscipit tempora. Sapiente deserunt inventore veritatis molestiae porro? Eum placeat nihil ut ea culpa nemo omnis!</p>
+            <p id="paragraph"></p>
+        </article>
+    </section>
+</main>
+ <script src="script.js"></script> 
+ <script>
+     const student ={name:"sourav",
+     age:25,
+     inch:5.11,
+     location:"patiya"
+    }
+    //---catch by tag name
+    const blogTitles = document.getElementsByTagName("h3")
+ // console.log(blogTitles)
+ for (h3 of blogTitles) {
+    // console.log(h3.innerText)
+    
+ }
+
+const details = document.getElementsByTagName("p")
+for(p of details) {
+   // console.log(p.innerText)
+}
+
+//--color all p tag inside a section
+const allblog = document.getElementsByTagName("section");
+for(h3 of allblog){
+    console.log(allblog)
+
+}
+
+//------catch by id
+
+const secondTitle = document.getElementById("second-title");
+secondTitle.style.color = "red";
+secondTitle.style.textAlign="center";
+secondTitle.innerText="Title updated by js";
+secondTitle.style.backgroundColor = "pink";
+secondTitle.style.padding="10px";
+secondTitle.style.width = "20%";
+secondTitle.style.marginLeft="40%"
+
+
+const blog = document.getElementsByTagName("p");
+for(p of blog){
+p.style.color = "blue"
+}
+//--catch by class
+
+const allTitle = document.getElementsByClassName("title");
+for(Article of allTitle){
+console.log(Article)
+Article.style.border="10px solid orange"
+Article.style.borderRadius="2px "
+Article.style.margin="50px"
+Article.style.padding="50px"
+}
+
+const thirdTitle = document.getElementsByClassName("third-title")
+for (third of thirdTitle) {
+    third.style.color = "green"
+    third.style.textAlign = "center"
+}
+
+
+//---create element 
+// element create by class
+// const head = document.createElement("h1")
+// head.innerText = "Written by JavaScript"
+//         //where u want to add a element
+//  const write = document.getElementsByClassName("add")
+//  for(written of write) {
+//      console.log(written,"span")  
+//      written.appendChild(head)
+//  }
+
+// for (let i = 0; i < write.length; i++) {
+//     written = write[i]
+//   written.appendChild(head)
+//    // written.style.backgroundColor ="red"
+//     console.log(written,"span tag")
+// }
+const testClass = document.createElement("h2")
+testClass.innerText = "Written by JS"
+
+const newItem = document.getElementsByClassName("test")
+for (item of newItem) {
+    console.log(item)
+    item.appendChild(testClass)
+}
+
+ //--element create by id
+ const par = document.createElement("p")
+ par.innerText="NIce to meet you"
+
+ const para = document.getElementById("paragraph")
+ para.appendChild(par)
+ para.style.color="red"
+ para.style.textAlign="center"
+
+ // add article on section
+
+//  const article = document.createElement("article")
+//  const part1 = document.createElement("h3")
+//  part1.innerText = "My awsome blog - 4"
+//  part1.style.textAlign = "center"
+//  part1.style.color = "blue"
+
+//  const part2 = document.createElement("p")
+//  part2.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore."
+//  part2.style.color = "white"
+// article.appendChild(part1)
+// article.appendChild(part2)
+// article.style.border="10px solid red"
+// article.style.borderRadius="2px "
+// article.style.margin="50px"
+// article.style.padding="50px"
+// article.style.backgroundColor="black"
+
+// const packet = document.getElementById("selector")
+// packet.appendChild(article)
+
+// create element by inner html
+// const div = document.createElement('div');
+// div.innerHTML =`
+
+// <h3 style="text-align:center;color:aqua">My awsome Blog-5</h3>
+// <p style="color:green;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore.</p>
+//    <h2>Create element with inner HTML</h2>
+// `
+
+// const part3 = document.getElementById("selector")
+// part3.appendChild(div)
+// div.style.border="10px solid red"
+// div.style.margin="50px"
+// div.style.padding="50px"
+// div.style.backgroundColor="black"
+// div.style.borderRadius="2px "
+// div.style.color="white"
+ </script>
+</body>
+</html>
