@@ -119,7 +119,7 @@ for (third of thirdTitle) {
 const testClass = document.createElement("h2")
 testClass.innerText = "Written by JS"
 
-const newItem = document.getElementsByClassName("test")
+const newItem = document.querySelectorAll(".test")
 for (item of newItem) {
     console.log(item)
     item.appendChild(testClass)
@@ -136,43 +136,43 @@ for (item of newItem) {
 
  // add article on section
 
-//  const article = document.createElement("article")
-//  const part1 = document.createElement("h3")
-//  part1.innerText = "My awsome blog - 4"
-//  part1.style.textAlign = "center"
-//  part1.style.color = "blue"
+ const article = document.createElement("article")
+ const part1 = document.createElement("h3")
+ part1.innerText = "My awsome blog - 4"
+ part1.style.textAlign = "center"
+ part1.style.color = "blue"
 
-//  const part2 = document.createElement("p")
-//  part2.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore."
-//  part2.style.color = "white"
-// article.appendChild(part1)
-// article.appendChild(part2)
-// article.style.border="10px solid red"
-// article.style.borderRadius="2px "
-// article.style.margin="50px"
-// article.style.padding="50px"
-// article.style.backgroundColor="black"
+ const part2 = document.createElement("p")
+ part2.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore."
+ part2.style.color = "white"
+article.appendChild(part1)
+article.appendChild(part2)
+article.style.border="10px solid red"
+article.style.borderRadius="2px "
+article.style.margin="50px"
+article.style.padding="50px"
+article.style.backgroundColor="black"
 
-// const packet = document.getElementById("selector")
-// packet.appendChild(article)
+const packet = document.getElementById("selector")
+packet.appendChild(article)
 
 // create element by inner html
-// const div = document.createElement('div');
-// div.innerHTML =`
+const div = document.createElement('div');
+div.innerHTML =`
 
-// <h3 style="text-align:center;color:aqua">My awsome Blog-5</h3>
-// <p style="color:green;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore.</p>
-//    <h2>Create element with inner HTML</h2>
-// `
+<h3 style="text-align:center;color:aqua">My awsome Blog-5</h3>
+<p style="color:green;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum ipsam praesentium, soluta explicabo maxime nam qui vitae pariatur officia quia accusantium. Ipsam corporis et temporibus. Architecto saepe laboriosam perspiciatis pariatur odio. Fugiat optio, at a saepe ex neque enim suscipit cumque nobis placeat iusto facilis temporibus nisi odit labore.</p>
+   <h2>Create element with inner HTML</h2>
+`
 
-// const part3 = document.getElementById("selector")
-// part3.appendChild(div)
-// div.style.border="10px solid red"
-// div.style.margin="50px"
-// div.style.padding="50px"
-// div.style.backgroundColor="black"
-// div.style.borderRadius="2px "
-// div.style.color="white"
+const part3 = document.getElementById("selector")
+part3.appendChild(div)
+div.style.border="10px solid red"
+div.style.margin="50px"
+div.style.padding="50px"
+div.style.backgroundColor="black"
+div.style.borderRadius="2px "
+div.style.color="white"
  </script>
 </body>
 </html>
